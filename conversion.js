@@ -22,3 +22,19 @@ if converted in boolean
 let loggedin=0
 let boolean=Boolean(loggedin)
 console.log(boolean)
+
+// Operation //
+
+let value=2
+let negvalue=-value
+let str1="jayanta"
+let str2=" Garai"
+let str3=str1+str2
+console.log(str3)
+
+console.log(1+'2'+2) // ans =122
+console.log('1'+2+2) // ans=122
+console.log(1+2+'2') // ans=32
+
+console.log(+true) // 1
+console.log(+"") // 0
