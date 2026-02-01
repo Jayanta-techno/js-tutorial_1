@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body style="background-color:aqua;color: rgb(42, 33, 20);">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="500px" id="Pahad" src="https://tse4.mm.bing.net/th/id/OIP.kKSNTRAx0Zm792CEpN6v4AHaEI?pid=Api&P=0&h=180"></li>
+            <li><img width="500px" id="Nadi" src="https://tse2.mm.bing.net/th/id/OIP.NmvtzpgAyT0DacdIBWF5xwHaEo?pid=Api&P=0&h=180"></li>
+            <li><img width="500px" id="Fkower" src="https://tse2.mm.bing.net/th/id/OIP.zMFqKDHhNFfp6lBVvRXlmAHaGP?pid=Api&P=0&h=180"></li>
+            <li><img width="500px" id="Sky" src="https://tse2.mm.bing.net/th/id/OIP.LZnAMI8jAtj7Y-Xx71J5MQHaEK?pid=Api&P=0&h=180"></li>
+            <li><a style="color: rgb(13, 48, 79);" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('Pahad').onclick=function(){
+    //     alert("It's a mountain");
+    // }
+    // attachEvent()
+    //jQuery-on
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul")
+    // },false);
+    // document.getElementById('Nadi').addEventListener('click',function(e){
+    //     console.log("it's river")
+    //     e.stopPropagation(); // stop the bubbling amd capturing
+    // },false)
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault(); //default opening of link is closed
+    //     e.stopPropagation()
+    //     console.log("GOOGLE pe haat dala hai")
+    // })
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName ==='IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+    })
+</script>
+</html>
